@@ -1,0 +1,59 @@
+@import '../../../styles';
+@import '../../../functions';
+
+.container{
+    margin: 2rem 2rem;
+    background-color: var(--bodyBackground);
+    color: var(--textColor);
+
+}
+
+.content{
+
+    &__search{
+        display: flex; 
+        justify-content: space-between;
+    }
+
+    &__input{        
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &--input{
+            width: 20rem;
+            padding: 1rem;
+            border-radius: .5rem;
+            outline: none;
+            border: none;
+            background-color: var(--inputBackground);    
+            color: var(--textColor);        
+        }
+
+        &--icon{
+            position: absolute; 
+            left: 1rem;
+        }
+
+        &--select{
+            width: 10rem;
+            padding: 1rem;
+            border-radius: .5rem;
+            outline: none;
+            border: none;
+            background-color: var(--inputBackground);
+            color: var(--textColor);
+        }
+
+    }
+
+    &__countries{ 
+        display: inline-block;
+        
+    }
+
+    &__card{
+        
+    }
+}
+

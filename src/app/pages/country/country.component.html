@@ -1,0 +1,48 @@
+<!-- {{countrySelected.languages | json}} -->
+
+<div class="container" *ngIf="error">
+    <button class="btn" routerLink="/">&larr; Back</button>
+
+    <div class="error">
+        <h1>Oops! There is an error with this country. Please go back.</h1>
+    </div>
+
+</div>
+
+<div class="container" *ngIf="countrySelected">
+    <button class="btn" routerLink="/">&larr; Back</button>
+
+    <div class="country">
+        <div class="country__img">
+            <img [src]="countrySelected.flag" alt="">
+        </div>
+        <div class="country__details" style="">
+            <h1>{{countrySelected.name}}</h1>
+            <div class="country__details-data">
+                <div class="country__details-data--left">
+                    <p class="item">Native Name: <span class="span">{{countrySelected.nativeName}}</span></p>
+                    <p class="item">Population:  <span class="span">{{countrySelected.population | number}}</span></p>
+                    <p class="item">Region:      <span class="span">{{countrySelected.region}}</span></p>
+                    <p class="item">Sub Region:  <span class="span">{{countrySelected.subregion}}</span></p>
+                    <p class="item">Capital:     <span class="span">{{countrySelected.capital}}</span></p>
+                </div>
+                <div class="country__details-data--right">
+                    <p class="item">Top Level Domain: <span class="span">{{countrySelected.topLevelDomain}}</span></p>
+                    <p class="item">Currencies:       <span class="span" *ngFor="let curr of countrySelected.currencies">{{curr.code}}</span></p>
+                    <p class="item">Languages:        <span class="span" *ngFor="let lang of countrySelected.languages">{{lang.name}}, </span></p>
+                </div>
+            </div>
+
+            <div class="country__borders">
+                <span class="country__borders--title">Border countries:</span> 
+                <span class="country__borders--borders" *ngFor="let border of countrySelected.borders">{{border}}</span>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+</div>

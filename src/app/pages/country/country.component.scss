@@ -1,0 +1,98 @@
+@import '../../../styles';
+@import '../../../functions';
+
+.container{
+    margin: 2rem 2rem;
+    color: var(--textColor);
+
+    .btn{
+        padding: .5rem 1.6rem;
+        outline: none;
+        border: 2px solid #eaeaea;
+        background-color: white;
+        border-radius: .3rem;
+        cursor: pointer;
+
+    }
+
+    .error{
+        font-size: 1.5rem;
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+
+    }
+}
+
+.country{
+    margin-top: 2rem;
+    display: flex;    
+
+    &__img{
+        flex: 0 0 45%;    
+
+        & img{
+            max-width: 100%;
+            max-height: 100%;
+            width: 90%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__details{
+        flex: 0 0 55%;        
+        padding-bottom: 2rem;
+
+        &__box{
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+
+    &__details-data{
+        display: flex;
+        justify-content: space-between;
+        font-size: .8rem;
+        width: 75%;
+
+        .item{
+            font-weight: bold;
+            
+        }
+
+        .span{
+            font-weight: normal;
+        }
+        &--left{
+        }
+
+        &--right{
+
+        }
+        
+    }
+
+    &__borders{
+        margin-top: 1rem;
+
+        &--title{
+            font-size: .8rem;
+            font-weight: bold;
+            margin-right: .3rem;
+        }
+
+        &--borders{
+            font-size: .7rem;
+            margin-right: .3rem;
+            border: 1px solid #eaeaea;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding: .2rem 1rem;
+
+        }
+
+    }
+
+}

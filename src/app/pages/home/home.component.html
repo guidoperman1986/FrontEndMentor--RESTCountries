@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="content__search">
+        <div class="content__input">
+            <input  class="content__input--input" 
+                    type="text" 
+                    id="input" 
+                    placeholder="Search for a country" 
+                    #search 
+                    (keyup)="searchValue(search.value)"
+            >
+            
+            <!-- <i     class="content__input--icon fas fa-search"></i> -->
+        </div>
+    
+        <select class="content__input--select" name="" id="inputSelect" #region (change)="queryByRegion(region.value)">
+            <option value="select">Filter by Region</option>
+            <option value="Africa">Africa</option>
+            <option value="Americas">Americas</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+        </select>
+    
+    </div>
+
+    <div>
+
+        <div class="content__countries" *ngFor="let countrie of countriesArray">
+            
+                <app-card [countrie]="countrie" class="content__card" [routerLink]="['country',countrie.cioc]"></app-card>  
+    
+        </div>
+
+    </div>
+    
+
+
+
+</div>
+

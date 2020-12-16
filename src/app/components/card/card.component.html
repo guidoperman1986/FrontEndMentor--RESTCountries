@@ -1,0 +1,11 @@
+<div class="card" name="card" id="card">
+    <img [src]="countrie.flag"  alt="" class="card__img">
+    <h3>{{countrie.name | slice:0:20}}</h3>
+    <p class="card__label">Population: <span class="card__detail">{{countrie.population | number}}</span></p>
+    <p class="card__label">Region:     <span class="card__detail">{{countrie.region}}</span></p>
+    <p class="card__label">Capital:    <span class="card__detail">{{countrie.capital}}</span></p>
+</div>
+
+
+
+<!-- {{countrie | json}} -->

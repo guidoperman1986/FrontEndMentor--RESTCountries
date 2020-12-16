@@ -1,0 +1,9 @@
+<div id="nav" class="nav">
+    <nav class="nav__container">
+        <div routerLink="/" class="nav__title">Where in the world?</div>
+        <div class="nav__dark" (click)="cambiarColor();aplicarColor();"><!-- cambiarColor(); aplicarColor() -->
+            <i *ngIf="mode=='light'" class="far fa-moon"></i>
+            <i *ngIf="mode=='dark'" class="fas fa-moon"></i>&nbsp;&nbsp;Dark Mode
+        </div>
+    </nav>
+</div>

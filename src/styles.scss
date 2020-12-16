@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Nunito', sans-serif;
+}
+
+// default colors
+.theme-wrapper {
+    --bodyBackground: #000;
+    --textColor: black;
+    --inputBackground: #eaeaea;
+    --cardBackground: #eaeaea;
+
+
+}
+
+$variables: (
+    --bodyBackground: var(--bodyBackground),
+    --textColor: var(--textColor),
+    --inputBackground: var(--inputBackground),
+    --cardBackground: var(--cardBackground)
+
+
+
+
+
+)

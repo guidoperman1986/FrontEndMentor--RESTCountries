@@ -1,0 +1,29 @@
+@import '../../../styles';
+@import '../../../functions';
+
+.nav{
+    background-color: var(--bodyBackground);
+    color: var(--textColor);
+    padding: 1.5rem; 
+    border-bottom: .5px solid rgb(223, 220, 220);
+
+    &__container{
+        display: flex; 
+        justify-content: space-between;
+
+    }
+
+    &__title{
+        font-weight: bold;
+        cursor:pointer;
+    }
+
+    &__dark{
+        cursor: pointer;
+    }
+
+    &__dark > i{
+        margin-left: .5rem;
+    }
+
+}
